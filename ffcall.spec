@@ -1,14 +1,13 @@
 Summary:	Libraries for building foreign function call interfaces
 Summary(pl):	Biblioteki do tworzenia interfejsów wywo³añ obcych funkcji
 Name:		ffcall
-Version:	1.9
+Version:	1.10
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
-# official URL is http://www.haible.de/bruno/gnu/, but not browsable
-Source0:	ftp://ftp.ilog.fr/pub/Users/haible/gnu/%{name}-%{version}.tar.gz
-# Source0-md5:	8437c7f973db2d3d340c833d23001c64
+Source0:	ftp://ftp.santafe.edu/pub/gnu/%{name}-%{version}.tar.gz
+# Source0-md5:	2db95007e901f3bc2ae7e5a9fe9ebea4
 URL:		http://www.haible.de/bruno/packages-ffcall.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
