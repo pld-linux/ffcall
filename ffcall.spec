@@ -1,16 +1,14 @@
 Summary:	Libraries for building foreign function call interfaces
 Summary(pl):	Biblioteki do tworzenia interfejsów wywo³añ obcych funkcji
 Name:		ffcall
-Version:	1.8d
-Release:	2
+Version:	1.9
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Libraries
-# original version (1.8):
-#Source0:	ftp://ftp.ilog.fr/pub/Users/haible/gnu/%{name}-%{version}
-# version updated for GNUstep project:
-Source0:	ftp://ftp.gnustep.org/pub/gnustep/libs/%{name}-%{version}.tar.gz
-# Source0-md5:	de022f82ee47c83039d496268c89b0b2
+# official URL is http://www.haible.de/bruno/gnu/, but not browsable
+Source0:	ftp://ftp.ilog.fr/pub/Users/haible/gnu/%{name}-%{version}.tar.gz
+# Source0-md5:	8437c7f973db2d3d340c833d23001c64
 URL:		http://www.haible.de/bruno/packages-ffcall.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,7 +46,7 @@ cygwinem i mingw32.
 Summary:	Development files for ffcall libraries
 Summary(pl):	Pliki dla programistów u¿ywaj±cych bibliotek ffcall
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Development files for ffcall libraries: headers and static trampoline
@@ -62,7 +60,7 @@ statyczne biblioteki trampoline oraz vacall.
 Summary:	Static versions of avcall and callback libraries
 Summary(pl):	Statyczne wersje bibliotek avcall i callback
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static versions of avcall and callback libraries.
@@ -74,7 +72,7 @@ Statyczne wersje bibliotek avcall i callback.
 %setup -q
 
 %build
-%configure2_13 \
+%configure \
 	--enable-shared
 
 %{__make}
@@ -94,11 +92,12 @@ rm -r $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS README
+%doc NEWS README
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
+%doc */*.html
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_libdir}/libtrampoline.a
