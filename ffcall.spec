@@ -10,6 +10,7 @@ Group:		Libraries
 #Source0:	ftp://ftp.ilog.fr/pub/Users/haible/gnu/%{name}-%{version}
 # version updated for GNUstep project:
 Source0:	ftp://ftp.gnustep.org/pub/gnustep/libs/%{name}-%{version}.tar.gz
+# Source0-md5:	de022f82ee47c83039d496268c89b0b2
 URL:		http://www.haible.de/bruno/packages-ffcall.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
