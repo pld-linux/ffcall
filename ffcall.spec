@@ -48,7 +48,7 @@ cygwinem i mingw32.
 Summary:	Development files for ffcall libraries
 Summary(pl):	Pliki dla programistów u¿ywaj±cych bibliotek ffcall
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 
 %description devel
 Development files for ffcall libraries: headers and static trampoline
@@ -62,7 +62,7 @@ statyczne biblioteki trampoline oraz vacall.
 Summary:	Static versions of avcall and callback libraries
 Summary(pl):	Statyczne wersje bibliotek avcall i callback
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 
 %description static
 Static versions of avcall and callback libraries.
