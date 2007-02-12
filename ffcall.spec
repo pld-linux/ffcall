@@ -1,5 +1,5 @@
 Summary:	Libraries for building foreign function call interfaces
-Summary(pl.UTF-8):   Biblioteki do tworzenia interfejsów wywołań obcych funkcji
+Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
 Name:		ffcall
 Version:	1.10
 Release:	1
@@ -43,7 +43,7 @@ cygwinem i mingw32.
 
 %package devel
 Summary:	Development files for ffcall libraries
-Summary(pl.UTF-8):   Pliki dla programistów używających bibliotek ffcall
+Summary(pl.UTF-8):	Pliki dla programistów używających bibliotek ffcall
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -57,7 +57,7 @@ statyczne biblioteki trampoline oraz vacall.
 
 %package static
 Summary:	Static versions of avcall and callback libraries
-Summary(pl.UTF-8):   Statyczne wersje bibliotek avcall i callback
+Summary(pl.UTF-8):	Statyczne wersje bibliotek avcall i callback
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
