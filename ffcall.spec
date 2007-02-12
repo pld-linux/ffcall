@@ -1,5 +1,5 @@
 Summary:	Libraries for building foreign function call interfaces
-Summary(pl):	Biblioteki do tworzenia interfejsów wywo³añ obcych funkcji
+Summary(pl.UTF-8):   Biblioteki do tworzenia interfejsÃ³w wywoÅ‚aÅ„ obcych funkcji
 Name:		ffcall
 Version:	1.10
 Release:	1
@@ -26,24 +26,24 @@ This version B includes some minor configuration changes so that files
 are installed in the proper place. Also it compiles on cygwin and
 mingw32.
 
-%description -l pl
-To jest zestaw czterech bibliotek, których mo¿na u¿yæ do tworzenia
-interfejsów wywo³añ obcych procedur we wbudowanych interpreterach.
+%description -l pl.UTF-8
+To jest zestaw czterech bibliotek, ktÃ³rych moÅ¼na uÅ¼yÄ‡ do tworzenia
+interfejsÃ³w wywoÅ‚aÅ„ obcych procedur we wbudowanych interpreterach.
 
 Te cztery pakiety to:
-- avcall - wywo³ywanie funkcji w C ze zmiennymi argumentami
-- vacall - funkcje w C akceptuj±ce prototypy ze zmiennymi argumentami
-- trampoline - domkniêcia jako funkcje C pierwszej klasy
-- callback - domkniêcia ze zmiennymi argumentami jako funkcje C
-  pierwszej klasy (zagnie¿d¿alna kombinacja vacall i trampoline)
+- avcall - wywoÅ‚ywanie funkcji w C ze zmiennymi argumentami
+- vacall - funkcje w C akceptujÄ…ce prototypy ze zmiennymi argumentami
+- trampoline - domkniÄ™cia jako funkcje C pierwszej klasy
+- callback - domkniÄ™cia ze zmiennymi argumentami jako funkcje C
+  pierwszej klasy (zagnieÅ¼dÅ¼alna kombinacja vacall i trampoline)
 
-Ta wersja B zawiera trochê ma³ych zmian w konfiguracji, dziêki którym
-pliki instaluj± siê we w³a¶ciwych miejscach. A tak¿e kompiluje siê pod
+Ta wersja B zawiera trochÄ™ maÅ‚ych zmian w konfiguracji, dziÄ™ki ktÃ³rym
+pliki instalujÄ… siÄ™ we wÅ‚aÅ›ciwych miejscach. A takÅ¼e kompiluje siÄ™ pod
 cygwinem i mingw32.
 
 %package devel
 Summary:	Development files for ffcall libraries
-Summary(pl):	Pliki dla programistów u¿ywaj±cych bibliotek ffcall
+Summary(pl.UTF-8):   Pliki dla programistÃ³w uÅ¼ywajÄ…cych bibliotek ffcall
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 
@@ -51,20 +51,20 @@ Requires:	%{name} = %{epoch}:%{version}-%{release}
 Development files for ffcall libraries: headers and static trampoline
 and vacall libraries.
 
-%description devel -l pl
-Pliki dla programistów u¿ywaj±cych bibliotek ffcall: nag³ówki i
+%description devel -l pl.UTF-8
+Pliki dla programistÃ³w uÅ¼ywajÄ…cych bibliotek ffcall: nagÅ‚Ã³wki i
 statyczne biblioteki trampoline oraz vacall.
 
 %package static
 Summary:	Static versions of avcall and callback libraries
-Summary(pl):	Statyczne wersje bibliotek avcall i callback
+Summary(pl.UTF-8):   Statyczne wersje bibliotek avcall i callback
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static versions of avcall and callback libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne wersje bibliotek avcall i callback.
 
 %prep
