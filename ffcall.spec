@@ -74,7 +74,10 @@ Statyczne wersje bibliotek avcall i callback.
 %configure \
 	--enable-shared
 
-%{__make}
+# with __make -j2:
+#	make[1]: *** No rule to make target `vacall_r/libvacall.la', needed by `libcallback.la'.  Stop.
+#	make[1]: *** Waiting for unfinished jobs....
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
