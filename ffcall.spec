@@ -8,6 +8,7 @@ License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.santafe.edu/pub/gnu/%{name}-%{version}.tar.gz
 # Source0-md5:	2db95007e901f3bc2ae7e5a9fe9ebea4
+Patch0:		%{name}-make-jN.patch
 URL:		http://www.haible.de/bruno/packages-ffcall.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -69,15 +70,13 @@ Statyczne wersje bibliotek avcall i callback.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
 	--enable-shared
 
-# with __make -j2:
-#	make[1]: *** No rule to make target `vacall_r/libvacall.la', needed by `libcallback.la'.  Stop.
-#	make[1]: *** Waiting for unfinished jobs....
-%{__make} -j1
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
