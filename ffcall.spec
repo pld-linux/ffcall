@@ -2,7 +2,7 @@ Summary:	Libraries for building foreign function call interfaces
 Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
 Name:		ffcall
 Version:	1.10
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		Libraries
@@ -85,8 +85,11 @@ install -d $RPM_BUILD_ROOT%{_mandir}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# don't need those since we have man pages
+%{__rm} $RPM_BUILD_ROOT/usr/share/html/*.html
+
 %clean
-rm -r $RPM_BUILD_ROOT
+rm -fr $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
@@ -99,7 +102,7 @@ rm -r $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc */*.html
-%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/lib*.so*
 %{_libdir}/lib*.la
 %{_libdir}/libtrampoline.a
 %{_libdir}/libvacall.a
