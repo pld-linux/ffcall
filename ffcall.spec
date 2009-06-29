@@ -13,6 +13,8 @@ Source0:	%{name}-%{snap}.tar.bz2
 # Source0-md5:	a5190885da8e701a012bb282bfb3c51b
 Patch0:		%{name}-make-jN.patch
 Patch1:		%{name}-sparcv9.patch
+# https://savannah.gnu.org/bugs/index.php?22081
+Patch2:		%{name}-sparc64.patch
 URL:		http://savannah.gnu.org/projects/libffcall
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -76,6 +78,7 @@ Statyczne wersje bibliotek avcall i callback.
 %setup -q -n %{name}-%{snap}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p0
 
 %build
 %configure \
