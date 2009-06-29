@@ -1,15 +1,18 @@
+%define		snap	20090629
+
 Summary:	Libraries for building foreign function call interfaces
 Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
 Name:		ffcall
-Version:	1.10
-Release:	2
+Version:	1.11
+Release:	0.%{snap}.1
 Epoch:		1
 License:	GPL
 Group:		Libraries
-Source0:	ftp://ftp.santafe.edu/pub/gnu/%{name}-%{version}.tar.gz
-# Source0-md5:	2db95007e901f3bc2ae7e5a9fe9ebea4
+# cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/libffcall co .
+Source0:	%{name}-%{snap}.tar.bz2
+# Source0-md5:	a5190885da8e701a012bb282bfb3c51b
 Patch0:		%{name}-make-jN.patch
-URL:		http://www.haible.de/bruno/packages-ffcall.html
+URL:		http://savannah.gnu.org/projects/libffcall
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -69,7 +72,7 @@ Static versions of avcall and callback libraries.
 Statyczne wersje bibliotek avcall i callback.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{snap}
 %patch0 -p1
 
 %build
