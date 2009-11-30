@@ -18,6 +18,8 @@ Patch2:		%{name}-sparc64.patch
 URL:		http://savannah.gnu.org/projects/libffcall
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%undefine	__cxx
+
 %description
 This is a collection of four libraries which can be used to build
 foreign function call interfaces in embedded interpreters.
@@ -94,7 +96,7 @@ install -d $RPM_BUILD_ROOT%{_mandir}
 	DESTDIR=$RPM_BUILD_ROOT
 
 # don't need those since we have man pages
-%{__rm} $RPM_BUILD_ROOT/usr/share/html/*.html
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/html/*.html
 
 %clean
 rm -fr $RPM_BUILD_ROOT
