@@ -107,17 +107,22 @@ rm -fr $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libavcall.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libavcall.so.?
+%attr(755,root,root) %{_libdir}/libcallback.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libcallback.so.?
 
 %files devel
 %defattr(644,root,root,755)
 %doc */*.html
-%attr(755,root,root) %{_libdir}/lib*.so*
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libavcall.so
+%attr(755,root,root) %{_libdir}/libcallback.so
+%{_libdir}/libavcall.la
+%{_libdir}/libcallback.la
 %{_libdir}/libtrampoline.a
 %{_libdir}/libvacall.a
-%{_includedir}/*
-%{_mandir}/man?/*
+%{_includedir}/*.h
+%{_mandir}/man3/*.3*
 
 %files static
 %defattr(644,root,root,755)
