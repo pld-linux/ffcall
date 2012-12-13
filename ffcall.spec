@@ -106,11 +106,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS README
+%doc ChangeLog NEWS PLATFORMS README
 %attr(755,root,root) %{_libdir}/libavcall.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libavcall.so.?
+%attr(755,root,root) %ghost %{_libdir}/libavcall.so.0
 %attr(755,root,root) %{_libdir}/libcallback.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libcallback.so.?
+%attr(755,root,root) %ghost %{_libdir}/libcallback.so.0
 
 %files devel
 %defattr(644,root,root,755)
@@ -121,8 +121,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libcallback.la
 %{_libdir}/libtrampoline.a
 %{_libdir}/libvacall.a
-%{_includedir}/*.h
-%{_mandir}/man3/*.3*
+%{_includedir}/avcall.h
+%{_includedir}/callback.h
+%{_includedir}/trampoline*.h
+%{_includedir}/vacall*.h
+%{_mandir}/man3/avcall.3*
+%{_mandir}/man3/callback.3*
+%{_mandir}/man3/trampoline*.3*
+%{_mandir}/man3/vacall.3*
 
 %files static
 %defattr(644,root,root,755)
