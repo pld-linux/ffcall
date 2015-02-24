@@ -1,5 +1,5 @@
 %define		snap	20090629
-%define		rel	1
+%define		rel	2
 
 Summary:	Libraries for building foreign function call interfaces
 Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
