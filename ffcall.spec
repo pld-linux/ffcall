@@ -1,10 +1,11 @@
 %define		snap	20090629
+%define		rel	1
 
 Summary:	Libraries for building foreign function call interfaces
 Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
 Name:		ffcall
 Version:	1.11
-Release:	0.%{snap}.1
+Release:	0.%{snap}.%{rel}
 Epoch:		1
 License:	GPL
 Group:		Libraries
