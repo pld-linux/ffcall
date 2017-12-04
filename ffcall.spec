@@ -1,13 +1,13 @@
 Summary:	Libraries for building foreign function call interfaces
 Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
 Name:		ffcall
-Version:	1.13
+Version:	2.0
 Release:	1
 Epoch:		1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/libffcall/libffcall-%{version}.tar.gz
-# Source0-md5:	cb3051a80726b5e7b9031c4038a56afc
+# Source0-md5:	e2e67382752287c5a7c42ac7ae79bfdc
 Patch0:		%{name}-make-jN.patch
 URL:		http://savannah.gnu.org/projects/libffcall
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -82,7 +82,6 @@ Statyczne wersje bibliotek avcall i callback.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-#install -d $RPM_BUILD_ROOT%{_mandir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -100,24 +99,29 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS PLATFORMS README
 %attr(755,root,root) %{_libdir}/libavcall.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libavcall.so.0
+%attr(755,root,root) %ghost %{_libdir}/libavcall.so.1
 %attr(755,root,root) %{_libdir}/libcallback.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libcallback.so.0
+%attr(755,root,root) %ghost %{_libdir}/libcallback.so.1
+%attr(755,root,root) %{_libdir}/libffcall.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libffcall.so.0
 %attr(755,root,root) %{_libdir}/libtrampoline.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libtrampoline.so.0
+%attr(755,root,root) %ghost %{_libdir}/libtrampoline.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %doc */*.html
 %attr(755,root,root) %{_libdir}/libavcall.so
 %attr(755,root,root) %{_libdir}/libcallback.so
+%attr(755,root,root) %{_libdir}/libffcall.so
 %attr(755,root,root) %{_libdir}/libtrampoline.so
 %{_libdir}/libavcall.la
 %{_libdir}/libcallback.la
+%{_libdir}/libffcall.la
 %{_libdir}/libtrampoline.la
 %{_libdir}/libvacall.a
 %{_includedir}/avcall.h
 %{_includedir}/callback.h
+%{_includedir}/ffcall-*.h
 %{_includedir}/trampoline*.h
 %{_includedir}/vacall*.h
 %{_mandir}/man3/avcall.3*
@@ -129,4 +133,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libavcall.a
 %{_libdir}/libcallback.a
+%{_libdir}/libffcall.a
 %{_libdir}/libtrampoline.a
