@@ -1,13 +1,13 @@
 Summary:	Libraries for building foreign function call interfaces
 Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
 Name:		ffcall
-Version:	2.2
+Version:	2.3
 Release:	1
 Epoch:		1
 License:	GPL v2+
 Group:		Libraries
 Source0:	https://ftp.gnu.org/gnu/libffcall/libffcall-%{version}.tar.gz
-# Source0-md5:	d4c7bf840673ec30c1f3b3edab98a7c6
+# Source0-md5:	488ab42990986016a690bd3acc490662
 Patch0:		%{name}-make-jN.patch
 URL:		http://savannah.gnu.org/projects/libffcall
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
