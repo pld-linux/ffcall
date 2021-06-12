@@ -2,7 +2,7 @@ Summary:	Libraries for building foreign function call interfaces
 Summary(pl.UTF-8):	Biblioteki do tworzenia interfejsów wywołań obcych funkcji
 Name:		ffcall
 Version:	2.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL v2+
 Group:		Libraries
@@ -85,6 +85,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# for dependency generator and debuginfo extraction to work
+chmod 755 $RPM_BUILD_ROOT%{_libdir}/lib*.so*
 
 # don't need those since we have man pages
 %{__rm} $RPM_BUILD_ROOT%{_datadir}/html/*.html
