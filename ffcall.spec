@@ -72,7 +72,7 @@ Statyczne wersje bibliotek avcall i callback.
 
 %prep
 %setup -q -n libffcall-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %configure \
